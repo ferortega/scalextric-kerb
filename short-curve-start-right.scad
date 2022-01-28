@@ -16,7 +16,7 @@ linear_extrude(kerb_height) polygon([
 
 hook_width = 8; // mm
 hook_bend_height = 2.2; // mm
-hook_bend_length = 2.1; // mm
+hook_bend_length = 2.2; // mm
 hook_barb_height = 6; // mm
 hook_barb_length = 1; // mm
 
