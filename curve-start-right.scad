@@ -18,7 +18,7 @@ hook_width = 8; // mm
 hook_bend_height = 2.2; // mm
 hook_bend_length = 2.1; // mm
 hook_barb_height = 6; // mm
-hook_barb_length = 1; // mm
+hook_barb_length = 2; // mm
 
 linear_extrude(hook_bend_height) polygon([
     [0.05*kerb_length, 0], 
@@ -31,8 +31,8 @@ linear_extrude(hook_bend_height) polygon([
 linear_extrude(hook_barb_height) polygon([
     [0.05*kerb_length, -hook_bend_length], 
     [0.05*kerb_length + hook_width, -hook_bend_length], 
-    [0.05*kerb_length + hook_width, -hook_bend_length-hook_bend_length], 
-    [0.05*kerb_length, -hook_bend_length-hook_bend_length]
+    [0.05*kerb_length + hook_width, -hook_bend_length - hook_barb_length], 
+    [0.05*kerb_length, -hook_bend_length - hook_barb_length]
 ]);
 
 linear_extrude(hook_bend_height) polygon([
@@ -46,8 +46,8 @@ linear_extrude(hook_bend_height) polygon([
 linear_extrude(hook_barb_height) polygon([
     [0.95*kerb_length - hook_width, -hook_bend_length], 
     [0.95*kerb_length, -hook_bend_length], 
-    [0.95*kerb_length, -hook_bend_length-hook_bend_length], 
-    [0.95*kerb_length - hook_width, -hook_bend_length-hook_bend_length]
+    [0.95*kerb_length, -hook_bend_length - hook_barb_length], 
+    [0.95*kerb_length - hook_width, -hook_bend_length - hook_barb_length]
 ]);
 
 // strips
